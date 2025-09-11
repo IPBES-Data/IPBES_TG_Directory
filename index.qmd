@@ -2,11 +2,13 @@
 title: "IPBES technical Guidline Series - Directory"
 format:
   html:
+    theme: cosmo    
     toc: true
-    theme: cosmo
+    toc-depth: 4
+    toc-expand: true
     anchor-sections: false
     embed-resources: true
-    
+    max-width: 4000px
 ---
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -33,8 +35,52 @@ The following Icons are used to indicate the relevant target groups for each TG:
 
 ## Current Technical Guidelines
 
-- [TG 1 Title](TG.html) — DOI: [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482) ![expert](figures/icon-expert.svg){height=15} ![tsu](figures/icon-tsu.svg){height=15} ![secretariat](figures/icon-secretariat.svg){height=15} ![assesment_tsu](figures/icon-assesment_tsu.svg){height=15} ![assesment_experts](figures/icon-assesment_experts.svg){height=15}
+<!-- - [TG 1 Title](TG.html)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482) ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+ -->
+
+### ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15} [The organisation of work guidelines (File naming, version schemes and experts lists)](TG.html)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
+### ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15} [The maps (but probably in an adjusted version: Conversion to the Robinson projection, Preparing and mapping data to IPBES regions and sub-regions and Cargographic guidelines)](TG.html)
+  
+  DOI: [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
+### ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15} [Guidelines for colour](TG.html)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
+### ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15} [File formats](TG.html)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
+### ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15} [Guideline for the delivery of figures](TG.html)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
+### ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15} [Contributing authors template email](TG.html)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
+### ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15} [Snowballing search](TG.html)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
+### ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15} [Citation of IPBES Assessments](TG.html)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
 
 <!--
 How to render locally:
