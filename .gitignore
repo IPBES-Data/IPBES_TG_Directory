@@ -51,3 +51,5 @@ rsconnect/
 # VScode workspace file
 IPBES_TG_xxx_template.code-workspace
 IPBES_TG_xxx_template_files/
+
+*.html
