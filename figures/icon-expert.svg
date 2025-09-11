@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3949AB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="expert">
+  <!-- Squircle outline -->
+  <rect x="1.5" y="1.5" width="21" height="21" rx="5.5" ry="5.5" fill="none" stroke="#B0BEC5" stroke-width="1.2"/>
+  <!-- Person -->
+  <circle cx="9" cy="8" r="3"/>
+  <path d="M4 19v-1a6 6 0 0 1 10 0v1"/>
+  <!-- Lightbulb (knowledge) -->
+  <circle cx="16.5" cy="7" r="2"/>
+  <path d="M16.5 9v1.5M15.7 10.5h1.6"/>
+  <path d="M14.7 5.9l-.9-.5M18.3 5.9l.9-.5M14.7 8.1l-.9.5M18.3 8.1l.9.5"/>
+</svg>
