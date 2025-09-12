@@ -39,50 +39,115 @@ The following Icons are used to indicate the relevant target groups for each TG:
 
 <!-- - [TG 1 Title](TG.html)
 
-  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482) ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15}
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"} ![expert](figures/icon-expert.svg){height=15}![tsu](figures/icon-tsu.svg){height=15}![secretariat](figures/icon-secretariat.svg){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg){height=15}![assesment_experts](figures/icon-assesment_experts.svg){height=15}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
  -->
 
 ### TODO ![none](figures/icon-none.svg "None"){height=15}![none](figures/icon-none.svg "None"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [The organisation of work guidelines (File naming, version schemes and experts lists)](TG.html)
 
-  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 2 - Preparing and mapping data](https://ipbes-data.github.io/IPBES_TG_mapping_regions/)
+
+  [![DOI: 10.5281/zenodo.6992546](https://zenodo.org/badge/DOI/10.5281/zenodo.6992546.svg)](https://doi.org/10.5281/zenodo.6992546){target="_blank"}
+  Guidance on preparing spatial and tabular data and mapping them consistently to IPBES regions and subregions. Covers data cleaning, coordinate reference systems and practical mapping steps to produce reproducible, publication-ready outputs.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 12A - file naming convention](https://ipbes-data.github.io/IPBES_TG_OoW_File_Naming/)
+
+  [![DOI: 10.5281/zenodo.10004406](https://zenodo.org/badge/DOI/10.5281/zenodo.10004406.svg)](https://doi.org/10.5281/zenodo.10004406){target="_blank"}
+  File naming rules to ensure clarity, traceability and automation. Provides patterns, examples and best practices so files are easy to find, sort and process across teams and versions.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 9 - Considerations when working with Indigenous and local knowledge](https://ipbes-data.github.io/IPBES_TG_ilk/)
+
+  [![DOI: 10.5281/zenodo.6834183](https://zenodo.org/badge/DOI/10.5281/zenodo.6834183.svg)](https://doi.org/10.5281/zenodo.6834183){target="_blank"}
+  Practical guidance for engaging with Indigenous Peoples and local knowledge holders ethically and effectively. Addresses consent, attribution, data governance and respectful integration of ILK in assessments.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 3 - Cartographic Guidelines](https://ipbes-data.github.io/IPBES_TG_cartographic_guidelines/)
+
+  [![DOI: 10.5281/zenodo.6992222](https://zenodo.org/badge/DOI/10.5281/zenodo.6992222.svg)](https://doi.org/10.5281/zenodo.6992222){target="_blank"}
+  Cartographic principles for IPBES figures: layout, symbology, labels, typography and legend design. Ensures consistent, accessible and publication-quality cartography across assessments.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 6 - How to Upload to and Download from Zenodo](https://ipbes-data.github.io/IPBES_TG_zenodo/)
+
+  [![DOI: 10.5281/zenodo.6834336](https://zenodo.org/badge/DOI/10.5281/zenodo.6834336.svg)](https://doi.org/10.5281/zenodo.6834336){target="_blank"}
+  Step‑by‑step instructions for publishing to and retrieving from Zenodo, including metadata, versioning, communities and DOIs. Helps ensure assessment artifacts are archived and citable.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 10 - Contributing authors template email](https://ipbes-data.github.io/IPBES_TG_contributing_authors/)
+
+  [![DOI: 10.5281/zenodo.6655926](https://zenodo.org/badge/DOI/10.5281/zenodo.6655926.svg)](https://doi.org/10.5281/zenodo.6655926){target="_blank"}
+  A ready‑to‑use email template and guidance for inviting contributing authors. Includes ILK and data policy considerations to ensure consistent, policy‑aligned outreach.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 4 - Guidelines for Colour](https://ipbes-data.github.io/IPBES_TG_colour/)
+
+  [![DOI: 10.5281/zenodo.6838820](https://zenodo.org/badge/DOI/10.5281/zenodo.6838820.svg)](https://doi.org/10.5281/zenodo.6838820){target="_blank"}
+  Recommendations for accessible, consistent colour usage in figures and maps. Discusses palette selection, contrast, accessibility and reproduction across media.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 8 - Guidelines for the delivery of figures](https://ipbes-data.github.io/IPBES_TG_figures/)
+
+  [![DOI: 10.5281/zenodo.6833989](https://zenodo.org/badge/DOI/10.5281/zenodo.6833989.svg)](https://doi.org/10.5281/zenodo.6833989){target="_blank"}
+  How to package and deliver figures for production: dimensions, resolution, fonts, formats and metadata. Ensures smooth workflows between authors, TSUs and the secretariat.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 11 - How to Document an Indicator](https://ipbes-data.github.io/IPBES_TG_indicators/)
+
+  [![DOI: 10.5281/zenodo.6882518](https://zenodo.org/badge/DOI/10.5281/zenodo.6882518.svg)](https://doi.org/10.5281/zenodo.6882518){target="_blank"}
+  Guidance to document indicators following FAIR and CARE principles. Covers metadata, methods, provenance and data stewardship so indicators are reusable and transparent.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 1 - Conversion to the Robinson Projection](https://ipbes-data.github.io/IPBES_TG_robinson_projection/)
+
+  [![DOI: 10.5281/zenodo.6840235](https://zenodo.org/badge/DOI/10.5281/zenodo.6840235.svg)](https://doi.org/10.5281/zenodo.6840235){target="_blank"}
+  Steps to convert geospatial datasets to the Robinson projection for global maps. Discusses CRS handling, reprojection pitfalls and producing consistent world maps for publication.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 12C - experts list](https://ipbes-data.github.io/IPBES_TG_OoW_Experts_Lists/)
+
+  [![DOI: 10.5281/zenodo.10004409](https://zenodo.org/badge/DOI/10.5281/zenodo.10004409.svg)](https://doi.org/10.5281/zenodo.10004409){target="_blank"}
+  Structure and maintenance of assessment experts lists. Covers required fields, update workflows and validation to keep records current and consistent.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 5 - File Formats](https://ipbes-data.github.io/IPBES_TG_file_formats/)
+
+  [![DOI: 10.5281/zenodo.6839037](https://zenodo.org/badge/DOI/10.5281/zenodo.6839037.svg)](https://doi.org/10.5281/zenodo.6839037){target="_blank"}
+  Preferred file formats for figures and data (vector vs raster, resolution, compression and export settings). Helps ensure high‑quality, accessible deliverables across platforms.
+
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Part 12B - versioning scheme](https://ipbes-data.github.io/IPBES_TG_OoW_Versioning/)
+
+  [![DOI: 10.5281/zenodo.10004407](https://zenodo.org/badge/DOI/10.5281/zenodo.10004407.svg)](https://doi.org/10.5281/zenodo.10004407){target="_blank"}
+  Versioning guidance for documents, figures and datasets in assessments. Defines simple schemes and practices to communicate changes clearly and manage releases over time.
 
 ### TODO ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![none](figures/icon-none.svg "None"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [The maps (but probably in an adjusted version: Conversion to the Robinson projection, Preparing and mapping data to IPBES regions and sub-regions and Cargographic guidelines)](TG.html)
   
-  DOI: [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  DOI: [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
 
 ### TODO ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Guidelines for colour](TG.html)
 
-  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
 
 ### TODO ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [File formats](TG.html)
 
-  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
 
 ### TODO ![none](figures/icon-none.svg "None"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![none](figures/icon-none.svg "None"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Guideline for the delivery of figures](TG.html)
 
-  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
 
 ### TODO ![none](figures/icon-none.svg "None"){height=15}![none](figures/icon-none.svg "None"){height=15}![none](figures/icon-none.svg "None"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![none](figures/icon-none.svg "None"){height=15} [Contributing authors template email](TG.html)
 
-  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
 
 ### ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![none](figures/icon-none.svg "None"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Snowballing search](https://ipbes-data.github.io/IPBES_TG_Snowballing/IPBES_TG_Snowballing.html)
 
  
-  [![DOI: 10.5281/zenodo.10257156](https://zenodo.org/badge/DOI/10.5281/zenodo.10257156.svg)](https://doi.org/10.5281/zenodo.10257156)
+  [![DOI: 10.5281/zenodo.10257156](https://zenodo.org/badge/DOI/10.5281/zenodo.10257156.svg)](https://doi.org/10.5281/zenodo.10257156){target="_blank"}
   Finding literature is an extremely important task in an assessment. This TG provides practical guidance on how to do a so-called snowballing search, a search approavh which folows the citation graph, to identify literature.
 
 ### TODO ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [Citation of IPBES Assessments](TG.html)
 
   ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts")
-   [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482)
+   [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"}
   The TG addresses the recurring question of if one can add animated comic strips in the assessments. It provides practical guidance on how to do so in a scientifically sound manner.
 
 <!--
@@ -92,3 +157,10 @@ How to render locally:
   - GitHub Markdown (overwrite README.md):
       quarto render README.qmd --to gfm --output README.md
 -->
+
+
+<!-- TEMPLATE FOR NEW TGs:
+### TODO FROM AI ![expert](figures/icon-expert.svg "Expert"){height=15}![tsu](figures/icon-tsu.svg "TSU"){height=15}![secretariat](figures/icon-secretariat.svg "Secretariat"){height=15}![assesment_tsu](figures/icon-assesment_tsu.svg "Assessment TSU"){height=15}![assesment_experts](figures/icon-assesment_experts.svg "Assessment Experts"){height=15} [TITLE OF TG](LINK TO PUBLISHED TG)
+
+  [![DOI: 10.5281/zenodo.11389482](https://zenodo.org/badge/DOI/10.5281/zenodo.11389482.svg)](https://doi.org/10.5281/zenodo.11389482){target="_blank"}
+  SHORT ONE LINE DESCRIPTION OF TG -->

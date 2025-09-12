@@ -1,0 +1,56 @@
+Rendering all QMDs under: TGs/TG repos
+Quarto: 1.7.33
+
+--- IPBES_TG_mapping_regions
+Rendering: mapping_regions.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_mapping_regions/render-log.txt)
+
+--- IPBES_TG_OoW_File_Naming
+Rendering: oow_file_naming.qmd
+Result: OK
+
+--- IPBES_TG_ilk
+Rendering: ilk_considerations.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_ilk/render-log.txt)
+
+--- IPBES_TG_cartographic_guidelines
+Rendering: cartograhic_guidelines.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_cartographic_guidelines/render-log.txt)
+
+--- IPBES_TG_zenodo
+Rendering: how_to_upload_and_download_from_zenodo.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_zenodo/render-log.txt)
+
+--- IPBES_TG_contributing_authors
+Rendering: contributing_authors_template.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_contributing_authors/render-log.txt)
+
+--- IPBES_TG_colour
+Rendering: guidelines_for_color.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_colour/render-log.txt)
+
+--- IPBES_TG_figures
+Rendering: figures.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_figures/render-log.txt)
+
+--- IPBES_TG_indicators
+Rendering: documenting_an_indicator.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_indicators/render-log.txt)
+
+--- IPBES_TG_robinson_projection
+Rendering: robinson_projection.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_robinson_projection/render-log.txt)
+
+--- IPBES_TG_OoW_Experts_Lists
+Rendering: oow_experts_list.qmd
+Result: OK
+
+--- IPBES_TG_file_formats
+Rendering: fileformats.qmd
+Result: FAIL (see TGs/TG repos/IPBES_TG_file_formats/render-log.txt)
+
+--- IPBES_TG_OoW_Versioning
+Rendering: oow_versioning.qmd
+Result: OK
+
+Summary: total=0, failed=0
