@@ -10,13 +10,10 @@ suppressWarnings({
   }
 })
 
-repos <- getOption("repos")
-if (!nzchar(repos["CRAN"]) && nzchar(Sys.getenv("RSPM"))) {
-  repos["CRAN"] <- Sys.getenv("RSPM")
-}
+
 install.packages(
   c("curl", "httr2", "yaml"), 
-  repos = repos, 
+  repos = "https://cran.rstudio.com/", 
   dependencies = TRUE
 )
 
@@ -153,7 +150,7 @@ for (nm in names) {
     ytxt_clean
   )
   y <- yaml.load(ytxt_clean)
-  title <- if (!is.null(y$title)) as.character(y$title) else nm
+  title <- if (!is.null(y$subtitle)) as.character(y$subtitle) else nm
   doi <- if (!is.null(y$doi)) as.character(y$doi) else ""
   abstract <- if (!is.null(y$abstract)) as.character(y$abstract) else ""
   idx <- if (!is.null(y$index_no)) as.character(y$index_no) else ""
