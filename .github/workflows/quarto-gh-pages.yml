@@ -67,8 +67,7 @@ jobs:
             install.packages(pkgs, repos = repos)
           }
           RS
-        run: |
-          Rscript ./scripts/generate_directory_from_remote.R
+          ./scripts/generate_directory_from_remote.R
 
       - name: Render index.qmd to HTML and GFM
         run: |
