@@ -56,6 +56,18 @@ jobs:
 
       - name: Generate directory listing from remote metadata
         run: |
+          Rscript - <<'RS'
+          pkgs <- c("yaml", "httr2") 
+          pkgs <- pkgs[nzchar(pkgs)]
+          if (length(pkgs)) {
+            repos <- getOption("repos")
+            if (!nzchar(repos["CRAN"]) && nzchar(Sys.getenv("RSPM"))) {
+              repos["CRAN"] <- Sys.getenv("RSPM")
+            }
+            install.packages(pkgs, repos = repos)
+          }
+          RS
+        run: |
           Rscript ./scripts/generate_directory_from_remote.R
 
       - name: Render index.qmd to HTML and GFM

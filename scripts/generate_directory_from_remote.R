@@ -11,12 +11,6 @@ suppressWarnings({
 })
 
 
-install.packages(
-  c("curl", "httr2", "yaml"), 
-  repos = "https://cran.rstudio.com/", 
-  dependencies = TRUE
-)
-
 library(yaml)
 library(httr2)
 
