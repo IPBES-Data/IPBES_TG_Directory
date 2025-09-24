@@ -54,7 +54,7 @@ jobs:
           }
           RS
 
-      - name: Generate directory listing from remote metadata
+      - name: Install packages for directory generator
         run: |
           Rscript - <<'RS'
           pkgs <- c("yaml", "httr2") 
@@ -67,7 +67,10 @@ jobs:
             install.packages(pkgs, repos = repos)
           }
           RS
-          ./scripts/generate_directory_from_remote.R
+
+      - name: Generate directory listing from remote metadata
+        run: |
+          Rscript ./scripts/generate_directory_from_remote.R
 
       - name: Render index.qmd to HTML and GFM
         run: |
