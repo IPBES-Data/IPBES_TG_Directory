@@ -9,16 +9,15 @@ suppressWarnings({
     suppressWarnings(suppressMessages(force(expr)))
   }
   need <- function(pkg) {
-    if (!requireNamespace(pkg, quietly = TRUE)) {
+    if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
       install.packages(pkg, repos = "https://cloud.r-project.org")
+      library(pkg, character.only = TRUE)
     }
   }
 })
 
-need("jsonlite")
 need("yaml")
-need("httr")
-need("curl")
+need("httr2")
 
 this_file <- function() {
   args <- commandArgs(trailingOnly = FALSE)
@@ -54,7 +53,7 @@ header_icons <- function(tokens_norm) {
     assesment_tsu = "Assessment TSU",
     assesment_experts = "Assessment Experts"
   )
-  
+
   has_slot <- function(slot, present) {
     syns <- switch(
       slot,
@@ -78,13 +77,13 @@ header_icons <- function(tokens_norm) {
     function(s) {
       if (has_slot(s, tokens_norm)) {
         sprintf(
-          "![%s](figures/icon-%s.svg \"%s\"){height=15}",
+          '![%s](figures/icon-%s.svg "%s"){height=15}',
           tolower(titles[[s]]),
           s,
           titles[[s]]
         )
       } else {
-        sprintf("![none](figures/icon-none.svg \"None\"){height=15}")
+        sprintf('![none](figures/icon-none.svg "None"){height=15}')
       }
     },
     character(1)
@@ -92,72 +91,87 @@ header_icons <- function(tokens_norm) {
   paste(parts, collapse = "")
 }
 
+fetch_json <- function(url, token) {
+  req <- request(url) |>
+    req_user_agent("IPBES_TG_Directory")
+  if (!is.na(token) && nzchar(token)) {
+    req <- req |> req_auth_bearer_token(token)
+  }
+  resp <- req_perform(req, error = FALSE)
+  if (resp_status(resp) >= 300) {
+    stop("GitHub API error: ", resp_body_string(resp))
+  }
+  resp_body_json(resp, simplifyVector = TRUE)
+}
+
+fetch_metadata_text <- function(url) {
+  req <- request(url) |>
+    req_user_agent("IPBES_TG_Directory") |>
+    req_timeout(10)
+  resp <- req_perform(req, error = FALSE)
+  if (resp_status(resp) != 200) {
+    return(NULL)
+  }
+  resp_body_string(resp)
+}
+
 # Discover repos via GitHub API
 gh_token <- Sys.getenv("GITHUB_TOKEN", unset = NA)
 api_url <- "https://api.github.com/orgs/IPBES-Data/repos?per_page=100&sort=full_name"
-ua <- httr::user_agent("IPBES_TG_Directory")
-req <- httr::GET(
-  api_url,
-  ua,
-  if (!is.na(gh_token)) {
-    httr::add_headers(Authorization = paste("Bearer", gh_token))
-  }
-)
-stop_for_status <- function(r) {
-  if (httr::status_code(r) >= 300) {
-    stop("GitHub API error: ", httr::content(r, as = "text"))
-  }
-}
-stop_for_status(req)
-repos <- jsonlite::fromJSON(httr::content(req, as = "text", encoding = "UTF-8"))
+repos <- fetch_json(api_url, gh_token)
 names <- repos$name
 names <- names[startsWith(names, "IPBES_TG_") & names != "IPBES_TG_Directory"]
 names <- sort(names, method = "radix")
 
 entries <- list()
 for (nm in names) {
-  url <- sprintf("https://ipbes-data.github.io/%s/metadata_qmd.yaml", nm)
-  try(
-    {
-      httr::with_config(httr::timeout(10), {
-        r <- httr::GET(url, ua)
-        if (httr::status_code(r) != 200) {
-          next
-        }
-        ytxt <- httr::content(r, as = "text", encoding = "UTF-8")
-        # Remove leading/trailing separators if present
-        ytxt_clean <- sub("^---\n", "", ytxt)
-        ytxt_clean <- sub("\n---\n?$", "\n", ytxt_clean)
-        y <- yaml::yaml.load(ytxt_clean)
-        title <- if (!is.null(y$title)) as.character(y$title) else nm
-        doi <- if (!is.null(y$doi)) as.character(y$doi) else ""
-        abstract <- if (!is.null(y$abstract)) as.character(y$abstract) else ""
-        idx <- if (!is.null(y$index_no)) as.character(y$index_no) else ""
-        cats <- character(0)
-        if (!is.null(y$categories)) {
-          cats <- unlist(y$categories, use.names = FALSE)
-        } else if (!is.null(y$keyword)) {
-          cats <- unlist(
-            strsplit(as.character(y$keyword), ","),
-            use.names = FALSE
-          )
-        }
-        cats <- trimws(cats)
-        cats <- cats[nzchar(cats)]
-        cats_norm <- tolower(gsub("[[:space:]]+", "_", cats))
-        link <- sprintf("https://ipbes-data.github.io/%s/", nm)
-        entries[[length(entries) + 1]] <- list(
-          repo = nm,
-          title = title,
-          doi = doi,
-          abstract = abstract,
-          cats_norm = cats_norm,
-          link = link,
-          index_no = idx
-        )
-      })
-    },
-    silent = TRUE
+  base_url <- sprintf("https://ipbes-data.github.io/%s/metadata_qmd", nm)
+  ytxt <- fetch_metadata_text(paste0(base_url, ".yaml"))
+  if (is.null(ytxt)) {
+    ytxt <- fetch_metadata_text(paste0(base_url, ".yml"))
+  }
+  if (is.null(ytxt)) {
+    next
+  }
+
+  ytxt_clean <- sub(
+    "^---
+",
+    "",
+    ytxt
+  )
+  ytxt_clean <- sub(
+    "
+---
+?$",
+    "
+",
+    ytxt_clean
+  )
+  y <- yaml.load(ytxt_clean)
+  title <- if (!is.null(y$title)) as.character(y$title) else nm
+  doi <- if (!is.null(y$doi)) as.character(y$doi) else ""
+  abstract <- if (!is.null(y$abstract)) as.character(y$abstract) else ""
+  idx <- if (!is.null(y$index_no)) as.character(y$index_no) else ""
+  cats <- character(0)
+  if (!is.null(y$categories)) {
+    cats <- unlist(y$categories, use.names = FALSE)
+  } else if (!is.null(y$keyword)) {
+    cats <- unlist(strsplit(as.character(y$keyword), ","), use.names = FALSE)
+  }
+  cats <- trimws(cats)
+  cats <- cats[nzchar(cats)]
+  cats_norm <- tolower(gsub("[[:space:]]+", "_", cats))
+  link <- sprintf("https://ipbes-data.github.io/%s/", nm)
+
+  entries[[length(entries) + 1]] <- list(
+    repo = nm,
+    title = title,
+    doi = doi,
+    abstract = abstract,
+    cats_norm = cats_norm,
+    link = link,
+    index_no = idx
   )
 }
 
@@ -184,11 +198,21 @@ on.exit(close(con), add = TRUE)
 
 for (e in entries) {
   ic <- header_icons(e$cats_norm)
-  cat(sprintf("### %s [%s](%s)\n\n", ic, e$title, e$link), file = con)
+  cat(
+    sprintf(
+      "### %s [%s](%s)
+
+",
+      ic,
+      e$title,
+      e$link
+    ),
+    file = con
+  )
   if (nzchar(e$doi)) {
     cat(
       sprintf(
-        "  [![DOI: %s](https://zenodo.org/badge/DOI/%s.svg)](https://doi.org/%s){target=\"_blank\"}\n",
+        '  [![DOI: %s](https://zenodo.org/badge/DOI/%s.svg)](https://doi.org/%s){target="_blank"}',
         e$doi,
         e$doi,
         e$doi
@@ -197,9 +221,21 @@ for (e in entries) {
     )
   }
   if (nzchar(e$abstract)) {
-    cat(sprintf("  %s\n", e$abstract), file = con)
+    cat(
+      sprintf(
+        "  %s
+",
+        e$abstract
+      ),
+      file = con
+    )
   }
-  cat("\n\n", file = con)
+  cat(
+    "
+
+",
+    file = con
+  )
 }
 
 message("Wrote ", out_file)

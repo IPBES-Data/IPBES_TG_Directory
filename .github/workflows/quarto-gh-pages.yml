@@ -26,10 +26,6 @@ jobs:
         run: |
           bash ./scripts/export_frontmatter.sh index.qmd
       
-      - name: Generate directory listing from remote metadata
-        run: |
-          Rscript ./scripts/generate_directory_from_remote.R
-
       - name: Detect R usage and packages
         run: |
           bash ./scripts/detect_r_packages.sh index.qmd || true
@@ -57,6 +53,10 @@ jobs:
             install.packages(pkgs, repos = repos)
           }
           RS
+
+      - name: Generate directory listing from remote metadata
+        run: |
+          Rscript ./scripts/generate_directory_from_remote.R
 
       - name: Render index.qmd to HTML and GFM
         run: |
