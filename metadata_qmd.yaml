@@ -1,0 +1,14 @@
+---
+title: "IPBES technical Guidline Series - Directory"
+format:
+  html:
+    theme: cosmo    
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    anchor-sections: false
+    embed-resources: true
+    page-layout: full
+    grid:
+      body-width: 800px   # ← this is the one that works
+---
