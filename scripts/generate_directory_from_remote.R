@@ -15,7 +15,7 @@ if (!nzchar(repos["CRAN"]) && nzchar(Sys.getenv("RSPM"))) {
   repos["CRAN"] <- Sys.getenv("RSPM")
 }
 install.packages(
-  c("curl", "htr2", "yaml"), 
+  c("curl", "httr2", "yaml"), 
   repos = repos, 
   dependencies = TRUE
 )
