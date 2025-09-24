@@ -17,6 +17,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup R (for directory generator)
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Export QMD front matter to metadata_qmd.yaml
+        run: |
+          bash ./scripts/export_frontmatter.sh index.qmd
+      
+      - name: Generate directory listing from remote metadata
+        run: |
+          Rscript ./scripts/generate_directory_from_remote.R
+
       - name: Detect R usage and packages
         run: |
           bash ./scripts/detect_r_packages.sh index.qmd || true
@@ -36,19 +49,18 @@ jobs:
         run: |
           Rscript - <<'RS'
           pkgs <- readLines("R.pkgs"); pkgs <- pkgs[nzchar(pkgs)]
-          if (length(pkgs)) install.packages(pkgs, repos = "https://cloud.r-project.org")
+          if (length(pkgs)) {
+            repos <- getOption("repos")
+            if (!nzchar(repos["CRAN"]) && nzchar(Sys.getenv("RSPM"))) {
+              repos["CRAN"] <- Sys.getenv("RSPM")
+            }
+            install.packages(pkgs, repos = repos)
+          }
           RS
 
       - name: Render index.qmd to HTML and GFM
         run: |
           quarto render index.qmd --to html --output index.html
-          # quarto render index.qmd --to gfm  --output README.md
-
-      # - name: Commit updated README.md to default branch
-      #   uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: "chore: update README.md from index.qmd [skip ci]"
-      #     file_pattern: README.md
 
       - name: Prepare publish dir
         run: |

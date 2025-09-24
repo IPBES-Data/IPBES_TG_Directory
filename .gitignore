@@ -60,3 +60,5 @@ R.pkgs
 /render_summary.*
 
 metadata_qmd.yaml
+generated/
+metadata.qmd/
