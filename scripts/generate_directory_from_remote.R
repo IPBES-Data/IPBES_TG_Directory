@@ -8,16 +8,20 @@ suppressWarnings({
   quietly <- function(expr) {
     suppressWarnings(suppressMessages(force(expr)))
   }
-  need <- function(pkg) {
-    if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
-      install.packages(pkg, repos = "https://cloud.r-project.org")
-      library(pkg, character.only = TRUE)
-    }
-  }
 })
 
-need("yaml")
-need("httr2")
+repos <- getOption("repos")
+if (!nzchar(repos["CRAN"]) && nzchar(Sys.getenv("RSPM"))) {
+  repos["CRAN"] <- Sys.getenv("RSPM")
+}
+install.packages(
+  c("curl", "htr2", "yaml"), 
+  repos = repos, 
+  dependencies = TRUE
+)
+
+library(yaml)
+library(httr2)
 
 this_file <- function() {
   args <- commandArgs(trailingOnly = FALSE)
