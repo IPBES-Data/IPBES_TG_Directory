@@ -22,9 +22,9 @@ jobs:
         with:
           use-public-rspm: true
           extra-packages: |
-              jsonlite
-              yaml
-              httr2
+              any::jsonlite
+              any::yaml
+              any::httr2
 
       - name: Generate directory listing from remote metadata
         run: |
