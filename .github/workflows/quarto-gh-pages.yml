@@ -21,6 +21,14 @@ jobs:
         uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
+        extra-packages: |
+            jsonlite
+            yaml
+            httr2
+
+      - name: Generate directory listing from remote metadata
+        run: |
+          Rscript ./scripts/generate_directory_from_remote.R
 
       - name: Export QMD front matter to metadata_qmd.yaml
         run: |
@@ -33,12 +41,6 @@ jobs:
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Setup R
-        if: hashFiles('R.pkgs') != ''
-        uses: r-lib/actions/setup-r@v2
-        with:
-          use-public-rspm: true
 
       - name: Install R packages
         if: hashFiles('R.pkgs') != ''
@@ -53,24 +55,6 @@ jobs:
             install.packages(pkgs, repos = repos)
           }
           RS
-
-      - name: Install packages for directory generator
-        run: |
-          Rscript - <<'RS'
-          pkgs <- c("yaml", "httr2") 
-          pkgs <- pkgs[nzchar(pkgs)]
-          if (length(pkgs)) {
-            repos <- getOption("repos")
-            if (!nzchar(repos["CRAN"]) && nzchar(Sys.getenv("RSPM"))) {
-              repos["CRAN"] <- Sys.getenv("RSPM")
-            }
-            install.packages(pkgs, repos = repos)
-          }
-          RS
-
-      - name: Generate directory listing from remote metadata
-        run: |
-          Rscript ./scripts/generate_directory_from_remote.R
 
       - name: Render index.qmd to HTML and GFM
         run: |

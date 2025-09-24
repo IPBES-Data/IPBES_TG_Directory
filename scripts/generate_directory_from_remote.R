@@ -12,6 +12,7 @@ suppressWarnings({
 
 
 library(yaml)
+library(jsonlite)
 library(httr2)
 
 this_file <- function() {
