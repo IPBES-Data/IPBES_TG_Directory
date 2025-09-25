@@ -27,7 +27,7 @@ jobs:
       - name: Install Packages (for directory generator)
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          use-public-rspm: true
+          cache-version: 2
           extra-packages: |
             any::jsonlite
             any::yaml

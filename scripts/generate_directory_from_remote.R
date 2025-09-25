@@ -112,7 +112,7 @@ fetch_metadata_text <- function(url) {
 }
 
 # Discover repos via GitHub API
-gh_token <- Sys.getenv("GITHUB_TOKEN", unset = NA)
+gh_token <- NA # Sys.getenv("GITHUB_TOKEN", unset = NA)
 api_url <- "https://api.github.com/orgs/IPBES-Data/repos?per_page=100&sort=full_name"
 repos <- fetch_json(api_url, gh_token)
 names <- repos$name
