@@ -93,7 +93,7 @@ fetch_json <- function(url, token) {
   if (!is.na(token) && nzchar(token)) {
     req <- req |> req_auth_bearer_token(token)
   }
-  resp <- req_perform(req, error = FALSE)
+  resp <- req |> req_error(is_error = function(resp) FALSE) |> req_perform()
   if (resp_status(resp) >= 300) {
     stop("GitHub API error: ", resp_body_string(resp))
   }
@@ -104,7 +104,7 @@ fetch_metadata_text <- function(url) {
   req <- request(url) |>
     req_user_agent("IPBES_TG_Directory") |>
     req_timeout(10)
-  resp <- req_perform(req, error = FALSE)
+  resp <- req |> req_error(is_error = function(resp) FALSE) |> req_perform()
   if (resp_status(resp) != 200) {
     return(NULL)
   }
@@ -112,8 +112,9 @@ fetch_metadata_text <- function(url) {
 }
 
 # Discover repos via GitHub API
-gh_token <- NA # Sys.getenv("GITHUB_TOKEN", unset = NA)
-api_url <- "https://api.github.com/orgs/IPBES-Data/repos?per_page=100&sort=full_name"
+# Token only lifts the unauthenticated rate limit (60 req/h per shared runner IP); type=public keeps the listing public-only
+gh_token <- Sys.getenv("GITHUB_TOKEN", unset = NA)
+api_url <- "https://api.github.com/orgs/IPBES-Data/repos?type=public&per_page=100&sort=full_name"
 repos <- fetch_json(api_url, gh_token)
 names <- repos$name
 names <- names[startsWith(names, "IPBES_TG_") & names != "IPBES_TG_Directory"]

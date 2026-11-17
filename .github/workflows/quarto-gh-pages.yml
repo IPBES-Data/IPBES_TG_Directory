@@ -6,7 +6,7 @@ on:
       - main
       - master
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:
@@ -36,6 +36,8 @@ jobs:
       - name: Generate directory listing from remote metadata
         run: |
           Rscript ./scripts/generate_directory_from_remote.R
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Export QMD front matter to metadata_qmd.yaml
         run: |

@@ -48,7 +48,7 @@ If every file is marked `eval: false`, the script lists only `knitr` and `rmarkd
 The rendered `index.html` can then be published through GitHub Pages or any static host.
 
 ## GitHub workflow
-- Runs on pushes to `main` or `master`, a nightly cron (`0 0 * * *`) and manual `workflow_dispatch` triggers.
+- Runs on pushes to `main` or `master`, a nightly cron (`0 3 * * *`) and manual `workflow_dispatch` triggers.
 - Executes the R automation first: regenerates `generated/tg_list.md`, exports front matter, and records any R package usage for CI.
 - Installs Quarto and, when `R.pkgs` exists, installs the detected R packages before rendering `index.qmd` to `index.html`.
 - Copies the rendered outputs plus supporting files into a temporary `public/` directory.
@@ -57,4 +57,4 @@ The rendered `index.html` can then be published through GitHub Pages or any stat
 ## Additional notes
 - Icons in `figures/` must keep their filenames because the generated listing expects specific names (for example `icon-expert.svg`).
 - When adding a new TG repository under `IPBES-Data`, make sure it uses te `IPBES_TG_TEMPATE` template which contains all functionality needed on the TG side, i.e. extracts `metadata_qmd.yaml` on GitHub Pages so it appears automatically in the directory the next time the listing is refreshed and publishes the website.
-- The github action `quarto-gh-pages.yml ` in `.github/workflows/` is executed upon push to main as well as each day at 00:00 UTC to ensure the directory is always up to date.
+- The github action `quarto-gh-pages.yml ` in `.github/workflows/` is executed upon push to main as well as each day at 03:00 UTC to ensure the directory is always up to date.
