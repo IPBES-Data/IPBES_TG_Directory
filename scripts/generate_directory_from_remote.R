@@ -177,17 +177,13 @@ if (length(entries) == 0) {
   quit(save = "no")
 }
 
-# Sort by index_no (if present), else by title
-has_index <- vapply(entries, function(e) nzchar(e$index_no), logical(1))
-ord <- order(
-  ifelse(
-    has_index,
-    vapply(entries, function(e) e$index_no, character(1)),
-    "zzz"
-  ),
-  vapply(entries, function(e) e$title, character(1)),
-  method = "radix"
-)
+# Sort numerically by index_no, else by the number in "Part N..." titles,
+# unnumbered last; ties (e.g. 12A/12B/12C) broken by title
+titles <- vapply(entries, function(e) e$title, character(1))
+nums <- suppressWarnings(as.numeric(vapply(entries, function(e) e$index_no, character(1))))
+from_title <- suppressWarnings(as.numeric(sub("^Part\\s+([0-9]+).*$", "\\1", titles)))
+nums[is.na(nums)] <- from_title[is.na(nums)]
+ord <- order(nums, titles, na.last = TRUE, method = "radix")
 entries <- entries[ord]
 
 con <- file(out_file, open = "w", encoding = "UTF-8")
